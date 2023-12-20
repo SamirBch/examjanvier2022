@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/public/style.css">
+
+<body>
+<h1>Vocabulary</h1>
+<table id="liste1">
+    <thead>
+        <th>Word </th>
+        <th>Translation </th>
+        <th> Pourcentage </th>
+        <th> Actions</th>      
+    </thead>
+    <tbody>
+        <% for(var i=0; i < colonne.length; i++) {%>
+            <tr>
+                <td>
+                    <%= colonne[i].word %>
+                </td>
+                <td>
+                    <%= colonne[i].Translation %>
+                </td>
+                <td>
+                    <%= colonne[i].Pourcentage %>
+                </td>
+                <td>
+                    <a href="/delete/<%=colonne[i].idtablevoc%>" >Effacer</a>
+                    
+                </td>
+            </tr>
+            <% } %>
+    </tbody>
+</table><br>
+
+
+
+
+
+
+<h3>Add a new word</h3>
+
+<form action="/addnewword" method="POST">
+    <Label>Word:</Label>
+    <input name="newword">
+    <label>Translation:</label>
+    <input name="newtranslation">
+    <input type="submit" />
+</form>
+
+
+</body>
+
+
+

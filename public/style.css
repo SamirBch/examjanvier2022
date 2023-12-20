@@ -1,0 +1,14 @@
+body {
+    width: 500px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+  }
+  
+
+  label, input {
+    display: block;
+    margin: 5px 0; 
+  }
+  
